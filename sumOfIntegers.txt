@@ -1,0 +1,20 @@
+Given a number, find sum of its digits.
+Examples : 
+Input : n = 687 --> (687%10)+(687%100)/10 + (687/100))
+Output : 21
+Input : n = 12   --> (12%10)  + 12/10
+Output : 3
+
+6878  --> (6878%10)+(6878%100)/10 + (6878%1000)/100)+ (6878/1000);
+static int getSum(int n) {
+	int sum=0;
+	int x=10;
+	int y=1;
+	while(n%x!=n){		
+		sum=sum + (n%x)/y;
+		x=x*10;
+		y=y*10;
+	}
+	return sum+(n/(x/10));
+}
+
