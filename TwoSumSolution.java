@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class TwoSumSolution {
+    //two sum solution
     public static void main(String[] args) {
         int result[] = Solution.twoSum(new int[] {2, 7, 11, 15}, 9);
         for (int i = 0; i< result.length; i++) {
